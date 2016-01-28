@@ -4,7 +4,7 @@ entity welcome is     port(
 clk:in std_logic; -- This is the main clock
 rst:in std_logic;
 data_in:in std_logic;
-data_out:out std_logic
+data_out:out std_logic; -- TODO : fix syntax error
 );end entity welcome;
 
 architecture RTL of welcome is
@@ -16,7 +16,7 @@ begin
 if (rst  == '1') then -- TODO : fix syntax error
 			
 elsif rising_edge(clk) then
-data_out := data_in; -- TODO : fix syntax error
+data_out := data_in; -- TODO : fix syntax error (use the quick fix this time)
 end if;
 end process name;
 
