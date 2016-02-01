@@ -23,8 +23,8 @@ begin
 			iterations => 12
 		)
 		port map(
-			data_out => open,           -- TODO Use Ctrl+clk to navigate to the component port
-			clk      => '0',            -- TODO Use Ctrl+clk to navigate to the matching entity port
+			data_out => open,           -- TODO Use Ctrl+click to navigate to the component port
+			clk      => '0',            -- TODO Use Ctrl+click to navigate to the matching entity port
 			valid    => '1',            -- TODO Use F3 to navigate to the component port
 			start    => '1',            -- TODO Use Shift+F3 to navigate to the matching entity port
 			data_in  => data,
