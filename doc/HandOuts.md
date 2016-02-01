@@ -6,8 +6,8 @@
 
 Requirements:
 
-  * Sigasi 3.0.1
-  * valid Sigasi (XL-DOC) license file
+  * Sigasi Studio 3.0.1
+  * Valid Sigasi Studio XL Doc licenses for all participants
   * Training VHDL sources (see below)
 
 Get the training sources:
@@ -15,7 +15,7 @@ Get the training sources:
 * Download the source files from <https://github.com/sigasi/sigasi_training/archive/master.zip>
 * Unzip
 
-You can find the files for each part in the corresponding folder. 
+The zip file contains folders with VHDL code for each of the following parts, named `part1` through `part4`
 
 The VHDL source files contain `TODO` comments, which explain the tasks of the exercises. This document is an extra tool to guide you trough the exercises. It also helps you to keep track of your progress.
 
@@ -38,15 +38,15 @@ The VHDL source files contain `TODO` comments, which explain the tasks of the ex
 
 ## Part 1: VHDL files
 
-The goal of the first part is to get comfortable with the Sigasi VHDL editor. By the end you should be able to _easily detect and fix VHDL syntax issues_, _customize editor preferences_ and _know the basic keyboard shortcuts_.
+The goal of the first part is to get comfortable with the Sigasi Studio VHDL editor. By the end you will be able to _easily detect and fix VHDL syntax issues_, _customize editor preferences_ and _know the basic keyboard shortcuts_.
 
 ### Edit
 
 * Open file `part1_edit.vhd` via **File > Open File...**
-* Make the editor _full screen_ (Double click the tab)
+* Make the editor _full screen_ (Double click on the tab)
 * Double click again to exit _full screen_ mode
-* Format the VHDL code (**Ctrl+Shift+F**, _Make sure no text is selected_)
-* Fix all VHDL syntax issues, use the QuickFix where possible (When in doubt, **Hover** the error Marker)
+* Format the VHDL code (**Ctrl+Shift+F**, _Make sure that no text is selected_)
+* Fix all VHDL syntax issues, use the QuickFix where possible (When in doubt, **Hover** over the error Marker)
 
 * Delete a line with **Ctrl+D**
 * Comment a line with **Ctrl+/**
@@ -65,7 +65,7 @@ The goal of the first part is to get comfortable with the Sigasi VHDL editor. By
 	* Use **Ctrl+K** to find the next occurrence of the current selection
 	* Use **Ctrl+J** (and start typing) for an inline, incremental search. _Look at the status bar to see what you have already typed_.
 * Use **Quick Access** to convert an identifier to UpperCase (Select the identifier, type `upper` in the Quick Access Field in the Toolbar and confirm with **Enter**)
-* Mess up part of the source code, select it and **format only the selection**.
+* Mess up the indendtation of a part of the source code, select it and **format only the selection**.
 
 ### Navigate
 
@@ -81,17 +81,17 @@ The goal of the first part is to get comfortable with the Sigasi VHDL editor. By
 
 Preferences can be set via **Window > Preferences**.
 * Open file `part1_custom.vhd`
-* Switch to VHDL 2008 (**Preferences > Sigasi > VHDL**) and check the syntax error get resolved
+* Switch to VHDL 2008 (**Preferences > Sigasi > VHDL**) and note that the syntax error get resolved
 * Tabs or spaces ( Use the search box in the preference dialog and type `tab`) Use _Show whitespace_ to check.
 * Uppercase keywords (**Preferences > Sigasi > VHDL > Formatting**) (Use _format_ to check)
 
 ### Extra tasks
 
 * Open file `part1_extra.vhd`
-* *Stuttering* (double tap the `.`, `:` or `,` key)
+* *Stuttering* (in the editor, double tap the `.`, `:` or `,` key)
 * Try *structured select* <http://insights.sigasi.com/manual/editor.html#structured-selection>
 * Remove trailing whitespace (Use **Quick Access** to find and run this action)
-* Drag and drop a file from your file explorer in Sigasi  
+* Drag and drop a file from your file explorer in the Editor part of Sigasi Studio
 * Create a new file  (**File > New External File**)
 * Outline: Figure out what *Link with editor* button (⇆) does
 * Add a keyboard shortcut preference for _show whitespace_ (Search for the **Keys** preference page)
@@ -100,9 +100,9 @@ Preferences can be set via **Window > Preferences**.
 
 ## Part 2: VHDL projects
 
-The goal of Part 2 is to understand what a project is, why you want projects and how to set one up. You will learn how to add files to your projects and make sure the VHDL library is correctly setup.
+The goal of Part 2 is to understand what a project is, why you want projects and how to set one up. You will learn how to add files to your projects and make sure the VHDL library is set up correctly.
 
-As an extra, you will how to efficiently work with Finite State Machines.
+As an extra, you will learn how to efficiently work with Finite State Machines.
 
 ### Setup
 
@@ -117,7 +117,7 @@ As an extra, you will how to efficiently work with Finite State Machines.
 
 * Open `navigation.vhd` with **Open Resource** (**Ctrl+Shift+R**) or via the Project Explorer
   * Project Explorer: Enable the *Link with editor* button (⇆)
-  * Hover `MAX_COUNT`
+  * Hover over `MAX_COUNT`
   * Open declaration of `std_logic` and other declarations
   * Navigate back (**Alt+Left**)
 
@@ -161,7 +161,7 @@ As an extra, you will how to efficiently work with Finite State Machines.
 
 ### Import (non-Sigasi) project + setup libraries
 
-* First: Check that your are VHDL 2008 mode
+* First: Check that your are in VHDL 2008 mode
 * **File > Import...**
 * **Sigasi > Import a VHDL project**, **Next \>**
 * **Browse...** to `vunit_example`, **Finish**
@@ -184,17 +184,17 @@ As an extra, you will how to efficiently work with Finite State Machines.
 
 ## Part 3: Linting and other features
 
-In Part 3 you will learn more about VHDL linting (code checks) and how you can get to zero warnings.
+In Part 3 you will learn about VHDL linting (code checks) and how you can get to zero warnings.
 
-We will also explore other, generic Sigasi/Eclipse features.
+We will also explore other features that are not specific to VHDL.
 
 ### Linting
 
 * Import Project `part3`
 * Close unrelated projects (Right Click project in Project Explorer)
 * Fix all **Errors** (Track your progress in the Problems View)
-* Fix all `--TODO: fix` **Warnings** (Track your progress in the Task View)
-* Change the severity of the **Check for position associations in instantiations** linting via the Preferences (**Sigasi > VHDL > Errors/Warnings**). Set to severity to **Error**. Check that the warnings are now errors.
+* Fix all `--TODO: fix` **Warnings** (Track your progress in the Task View). We will get to the other warnings later.
+* Change the severity of the **Check for position associations in instantiations** linting via the Preferences (**Sigasi > VHDL > Errors/Warnings**). Set to severity to **Error**. Note that this warning in the code is now an error.
 
 ### Waive specific warnings
 
@@ -203,13 +203,13 @@ We will also explore other, generic Sigasi/Eclipse features.
  ```
  -- @suppress
  ```  
- **Note:** You need to save before the warnings are really suppressed.
-* Check that the warning marker is removed from the **Problems View**
+ **Note:** You need to save the file before the warnings disappears.
+* Note that the warning marker is removed from the **Problems View**
 * Explicitly specify which warning you suppress by adding the warning message prefix:
  ```
  -- @suppress "Null Range"
  ```
-* Verify that the warning marker re-appears when you type another prefix
+* Note that the warning marker re-appears when you type another prefix
 * Now also explain why you suppress the warning by adding an explanation:
  ```
  -- @suppress "Null Range" Ok here, see http://...
@@ -219,10 +219,10 @@ We will also explore other, generic Sigasi/Eclipse features.
 
 * Project Explorer
   * Show hidden files (Click **▿**, **Customize view**, disable the `.* resources`)
-  * Delete and restore a file from local history (Right click and **Restore from Local History...**)	
+  * Delete and restore a file from local history (Right click, **Restore from Local History...**)	
 * Bookmarks:
   * Right click a line number and select **Add Bookmark**
-  * Open the bookmark view
+  * Open the bookmark view (**Window > Show View**)
 * Multiple screen support
   1. Open a new Window (**Window > New Window**)
   2. Drag the new windows to a different screen
@@ -251,7 +251,7 @@ We will also explore other, generic Sigasi/Eclipse features.
   
 ## Part 4: Hierarchy, Graphics and documentation
 
-In Part 4 you will learn how to use the Hierarchy View. You will also learn how to use and export Graphics and Documentation with Sigasi.
+In Part 4 you will learn how to use the Hierarchy View. You will also learn how to use and export Graphics and Documentation with Sigasi Studio.
 
 ### Hierarchy View
 
@@ -260,36 +260,36 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 * Right click the `STR` architecture and select **Set as Top Level**
 * Explore the resulting tree in the Hierarchy View:
   * Inspect the value of generics (Notice how the value in `dut_instance` differs from its default value)
-  * Change some generics and see how the Hierarchy View is refreshed when you save.
-  * Add some syntax errors and verify that Sigasi is able to recover and still show valid content in the Hierarchy View
-  * Disable the **Toggle Hierarchy Refresh** toggle button, and notice Sigasi no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)
+  * Change the value of a generic and note how the Hierarchy View refreshes when you save the file.
+  * Add a syntax error in a file and note that Sigasi Studio is able to recover and still show valid content in the Hierarchy View.
+  * Disable the **Toggle Hierarchy Refresh** toggle button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)
 
 ### Block Diagram View
 
 * Open `testbench.vhd`
 * Right click the VHDL editor and select **Show in > Block Diagram**
 * Double click ports or connections to navigate to the corresponding VHDL code. (This also works the other way around by clicking **Show in > Block Diagram** on ports in the VHDL code)
-* Make some changes in the VHDL code and see how the Block Diagram updates when you save your file.
+* Make some changes in the VHDL code and note how the Block Diagram updates when you save your file.
 * Select `dut_instance` in the diagram, right click and select **Open Entity Declaration** to navigate to the corresponding entity, `dut`.
-* Click the save icon (	💾), and export the diagram to an SVG or PNG file.
+* Click the save icon (	💾), and export the diagram to a PNG or SVG file.
 
 ### State Machine View
 
 * Open `dut.vhd`
-* Right click the vhdl editor and select **Show in > State Machines**
-* Double click a few ports and transitions to navigate to the corresponding VHDL code.
-* Change the VHDL code of the state machine and notice how the view updates (See TODO tag)
-* Add a comment to the `when idle: state := preparing;` transition. e.g. `-- start preparing`  
+* Right click in the VHDL Editor and select **Show in > State Machines**
+* Double click on a few nodes and transitions in to navigate to the corresponding VHDL code.
+* Change the VHDL code of the state machine and notice how the view updates (See the TODO tag)
+* Add a comment to the `when idle: state := preparing;` transition. For example: `-- start preparing`  
   Notice how the transition labels update
 * Toggle the (Aa)-button to show/hide the transition labels.
-* Click the save icon (💾), and export the diagram to file.
+* Click the save icon (💾) to export the diagram to file.
 
 ### Documentation
 
 * Import project `Sigasi_doc`
 * Open the Documentation View
 * Open file `testbench.vhd`
-* Edit comments and see how the documentation is updated:
+* Edit comments and note how the documentation is updated:
   * Document a port (by adding a comment)
   * Document a generic
   * Document an architecture
@@ -300,7 +300,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 ### Extra tasks
 
 * Try out **Net search** in `stimgen.vhd` (Project `part4`)
-* State Machine View: Add a second state machine in `dut.vhd` and see how it is displayed in a new tab.
+* State Machine View: Add a second state machine in `dut.vhd` and note how it is displayed in a new tab.
 * Finish the documentation of the Project to get a clean and complete PDF.
 
 <!--
@@ -320,4 +320,4 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 
 
 ---
-Copyright Sigasi NV 2016
+Copyright © Sigasi nv 2016
