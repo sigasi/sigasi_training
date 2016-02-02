@@ -65,7 +65,7 @@ The goal of the first part is to get comfortable with the Sigasi Studio VHDL edi
 	* Use **Ctrl+K** to find the next occurrence of the current selection
 	* Use **Ctrl+J** (and start typing) for an inline, incremental search. _Look at the status bar to see what you have already typed_.
 * Use **Quick Access** to convert an identifier to UpperCase (Select the identifier, type `upper` in the Quick Access Field in the Toolbar and confirm with **Enter**)
-* Mess up the indendtation of a part of the source code, select it and **format only the selection**.
+* Mess up the indentation of a part of the source code, select it and **format only the selection**.
 
 ### Navigate
 
@@ -271,7 +271,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 * Double click ports or connections to navigate to the corresponding VHDL code. (This also works the other way around by clicking **Show in > Block Diagram** on ports in the VHDL code)
 * Make some changes in the VHDL code and note how the Block Diagram updates when you save your file.
 * Select `dut_instance` in the diagram, right click and select **Open Entity Declaration** to navigate to the corresponding entity, `dut`.
-* Click the save icon (	💾), and export the diagram to a PNG or SVG file.
+* Click the save icon 💾, and export the diagram to a PNG or SVG file.
 
 ### State Machine View
 
@@ -282,7 +282,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 * Add a comment to the `when idle: state := preparing;` transition. For example: `-- start preparing`  
   Notice how the transition labels update
 * Toggle the (Aa)-button to show/hide the transition labels.
-* Click the save icon (💾) to export the diagram to file.
+* Click the save icon 💾 to export the diagram to file.
 
 ### Documentation
 
