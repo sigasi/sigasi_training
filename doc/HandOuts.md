@@ -6,14 +6,11 @@
 
 Requirements:
 
-  * Sigasi Studio 3.0.1
-  * Valid Sigasi Studio XL Doc licenses for all participants
-  * Training VHDL sources (see below)
-
-Get the training sources:
-
-* Download the source files from <https://github.com/sigasi/sigasi_training/archive/master.zip>
-* Unzip
+* Sigasi Studio 3.0.1
+* Valid Sigasi Studio XL Doc licenses for all participants
+* Training VHDL sources:
+  * Download the source files from <https://github.com/sigasi/sigasi_training/archive/master.zip>
+  * Unzip
 
 The zip file contains folders with VHDL code for each of the following parts, named `part1` through `part4`
 
