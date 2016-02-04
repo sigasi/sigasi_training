@@ -25,7 +25,7 @@ begin
 	assert iterations <= MAX_COUNT;
 
 	COUNTER : process(clk, rst) is
-		type  ;--TODO delcare enum type `state_type` here with states `(start,running,read)`
+		type  ;--TODO delcare enum type `state_type` here with states `(init,running,read)`
 		var --TODO declare variable `state` of type `state_type` 
 	begin
 		if rst = '1' then

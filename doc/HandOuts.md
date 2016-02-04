@@ -77,17 +77,17 @@ The goal of the first part is to get comfortable with the Sigasi Studio VHDL edi
 ### Customize settings
 
 Preferences can be set via **Window > Preferences**.
+
 * Open file `part1_custom.vhd`
 * Switch to VHDL 2008 (**Preferences > Sigasi > VHDL**) and note that the syntax error get resolved
 * Tabs or spaces ( Use the search box in the preference dialog and type `tab`) Use _Show whitespace_ to check.
 * Uppercase keywords (**Preferences > Sigasi > VHDL > Formatting**) (Use _format_ to check)
 
-### Extra tasks
+### Optional Extra tasks
 
 * Open file `part1_extra.vhd`
-* *Stuttering* (in the editor, double tap the `.`, `:` or `,` key)
+* *Stuttering* (in the editor, double tap the `.`, `;` or `,` key)
 * Try *structured select* <http://insights.sigasi.com/manual/editor.html#structured-selection>
-* Remove trailing whitespace (Use **Quick Access** to find and run this action)
 * Drag and drop a file from your file explorer in the Editor part of Sigasi Studio
 * Create a new file  (**File > New External File**)
 * Outline: Figure out what *Link with editor* button (⇆) does
@@ -109,6 +109,7 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
   2. **Existing project into Workspace**, **Next**
   3. **Browse** to `part2_vhdl_project`
   5. **Finish**
+* Close unrelated projects (Right Click on the project in Project Explorer and select **Close Unrelated Projects**)
 
 ### Navigation
 
@@ -119,7 +120,7 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
   * Navigate back (**Alt+Left**)
 
 * Open `components.vhd`
-  * Navigate to Entity from Component instantiation (**Ctrl+Click** or **Shift+F3**)
+  * Navigate from the component instantiation to the matching entity: press and hold the **Ctrl** key and hover over the component to see a menu with hyperlinks. Click the link to open it.
   * Find References of port `rst`
   * Open two editors side by side (Drag editor tab)
 
@@ -133,6 +134,7 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 
 * Open file `edit.vhd`
 * Use Quickfix to fix the invalid sensitivity list
+* Remove trailing whitespace (Use **Quick Access** to find and run this action)
 
 ### Libraries
 
@@ -142,16 +144,17 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 ### State machines:
 
 * Open file `fsm.vhd`
-* Declare enum type `state_type`: (`start`, `running`, `ready`)
-* Declare signal `state` of `state_type`
+* Declare enum type `state_type`: (`init`, `running`, `ready`)
+* Declare variable `state` of `state_type`
 * Autocomplete `case statement`
 * Add some transitions
 * Add case choice `when idle` and use quickfix to add enum literal to enum type (QuickFix)
 * Remove case choice `when idle` and use the quickfix on `case state` to add it again.
-* **Ctrl+Click** on a state assignment and select **Open Matching when Clause**. 
+* **Ctrl+Hover** on a state assignment and select **Open Matching when Clause**. 
 
 ### Rename
 
+* Open file `rename.vhd`
 * Manual rename: Change (edit) `port_1` to `port_1a` and manually update the matching instantiations
 * Rename (**Refactor > Rename element**) port `port_a` to `port_aa`
 * Compare file with *Local history* (Right-click on file, **Compare With > Local History...**) and inspect the changes you made
@@ -164,18 +167,19 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 * **Browse...** to `vunit_example`, **Finish**
 * Set the project to library `uart_lib` (right click, **Set Library**)  
   Check the library annotations in the project explorer
-* Import library `vunit_lib`:
-  * Drag and drop the `vunit_lib` folder into the `Common Libraries` folder. Choose the option to _link to files and folders_.
+* Add library `vunit_lib`:
+  * Drag and drop the `vunit_lib` folder from you File System Explorer (e.g.: Windows Explorer, Mac Finder, Nautilus) into the `Common Libraries` folder (in the Project explorer). Choose the option to _link to files and folders_.
   * Set the library to `vunit_lib`  
 * Set the library for the test files (`uart/src/test`). Read the source code for the library name.
 * One more library is not correctly set. Try to fix this. (Tip: the sources are already in the project)
 
-### Extra Tasks
+### Optional Extra Tasks
 
 * Select `edit.vhd` and `navigate.vhd` and compare them via the right click menu.
 * Configure and enable an External Compiler (See `extra_compiler.vhd`)
 * Set the top level and start the Simulator (See `extra_compiler.vhd`)
 * Export a CSV file with all files in your project (**File > Export... > Sigasi > CSV file**)
+
 
 <p style="page-break-after:always;"></p>
 
@@ -216,7 +220,7 @@ We will also explore other features that are not specific to VHDL.
 
 * Project Explorer
   * Show hidden files (Click **▿**, **Customize view**, disable the `.* resources`)
-  * Delete and restore a file from local history (Right click, **Restore from Local History...**)	
+  * Delete a file from your project. Next, restore this file from local history (Right click, **Restore from Local History...**)
 * Bookmarks:
   * Right click a line number and select **Add Bookmark**
   * Open the bookmark view (**Window > Show View**)
@@ -231,7 +235,7 @@ We will also explore other features that are not specific to VHDL.
   5. Confirm with **OK**
   6. Create a new VHDL and select your customized template (**File > New > VHDL file**, choose a name, **Next** and choose the `entity/architecture pair` template)
 
-### Extra tasks
+### Optional Extra tasks
 
 * Customize your perspective:
   1. **Window > Perspective > Customize Perspective...**
@@ -272,8 +276,8 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 
 ### State Machine View
 
+* Click **Window > Show View > State Machines** to open the State Machine view
 * Open `dut.vhd`
-* Right click in the VHDL Editor and select **Show in > State Machines**
 * Double click on a few nodes and transitions in to navigate to the corresponding VHDL code.
 * Change the VHDL code of the state machine and notice how the view updates (See the TODO tag)
 * Add a comment to the `when idle: state := preparing;` transition. For example: `-- start preparing`  
@@ -294,7 +298,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 * Export PDF
 * Inspect the DocBook file
 
-### Extra tasks
+### Optional Extra tasks
 
 * Try out **Net search** in `stimgen.vhd` (Project `part4`)
 * State Machine View: Add a second state machine in `dut.vhd` and note how it is displayed in a new tab.

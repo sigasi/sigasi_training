@@ -28,10 +28,5 @@ begin
 
 end architecture STR;
 
-           
-
---TODO remove trailing whitespace (use Quick Access)                       
-
-
 --TODO press Ctrl+O to open Quick Outline and try to navigate to signal clk
 --      without using your mouse 
