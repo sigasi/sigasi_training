@@ -1,4 +1,4 @@
-![](sigasi_logo.png)
+![](sigasi__logo.png)
 
 # Sigasi Training
 
