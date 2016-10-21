@@ -1,3 +1,5 @@
+## Part 2: VHDL projects
+
 The goal of Part 2 is to understand what a project is, why you want projects and how to set one up. You will learn how to add files to your projects and make sure the VHDL library is set up correctly.
 
 As an extra, you will learn how to efficiently work with Finite State Machines.

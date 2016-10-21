@@ -1,3 +1,5 @@
+## Part 3: Linting and other features
+
 In Part 3 you will learn about VHDL linting (code checks) and how you can get to zero warnings.
 
 We will also explore other features that are not specific to VHDL.

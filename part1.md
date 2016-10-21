@@ -1,3 +1,5 @@
+## Part 1: VHDL files
+
 The goal of the first part is to get comfortable with the Sigasi Studio VHDL editor. By the end you will be able to _easily detect and fix VHDL syntax issues_, _customize editor preferences_ and _know the basic keyboard shortcuts_.
 
 ### Setup

@@ -1,3 +1,5 @@
+## Part 4: Hierarchy, Graphics and documentation
+
 In Part 4 you will learn how to use the Hierarchy View. You will also learn how to use and export Graphics and Documentation with Sigasi Studio.
 
 ### Hierarchy View
@@ -58,10 +60,3 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 
 * State Machine View: Add a second state machine in `dut.vhd` and note how it is displayed in a new tab.
 * Finish the documentation of the Project to get a clean and complete PDF.
-
-# Troubleshooting
-
-* Where are my views? → **Window > Perspective > Reset perspective**
-* Unexpected error markers? → **Project > Clean...**
-* Error markers are not updated? → Make sure **Automatic build** is enabled
-* More on <http://insights.sigasi.com/manual/trouble.html>
