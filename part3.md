@@ -44,6 +44,7 @@ We will also explore other features that are not specific to VHDL.
  ```
 
 ### VHDL version
+ * Set the workspace VHDL version to '93
  * Open `version.vhd`
  * Review the errors
  * Change the VHDL version of the project
