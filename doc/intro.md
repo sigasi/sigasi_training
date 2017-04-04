@@ -19,7 +19,7 @@
 
 Requirements:
 
-* Sigasi Studio 3.2
+* Sigasi Studio 3.4
 * Valid Sigasi Studio XL Doc licenses for all participants
 * Training VHDL sources:
 

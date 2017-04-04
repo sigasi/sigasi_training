@@ -19,7 +19,7 @@
 
 Requirements:
 
-* Sigasi Studio 3.2
+* Sigasi Studio 3.4
 * Valid Sigasi Studio XL Doc licenses for all participants
 * Training VHDL sources:
 
@@ -36,7 +36,7 @@ The goal of the first part is to get comfortable with the Sigasi Studio VHDL edi
 
 ### Setup
 * Open the Sigasi application
-* Switch to the **Sigasi** perspective (Button in top right)
+* Switch from the **Sigasi Starter** to the **Sigasi** perspective (Sigasi logos in top right)
 * In the status bar the status of the Sigasi license is shown
   * If you have a commercial license it should indicate **Sigasi Studio Creator** or **Sigasi Studio XL (Doc)**
 * Import project `Part1`
@@ -69,7 +69,7 @@ The goal of the first part is to get comfortable with the Sigasi Studio VHDL edi
     * Experiment with **Ctrl+F**, e.g. find all `TODO`'s
     * Use **Ctrl+K** to find the next occurrence of the current selection
     * Use **Ctrl+J** (and start typing) for an inline, incremental search. _Look at the status bar to see what you have already typed_.
-* Use **Quick Access** to convert an identifier to UpperCase (Select the identifier, type `upper` in the Quick Access Field in the Toolbar and confirm with **Enter**)
+* Use **Quick Access** (top-right text field or **Ctrl+3**) to convert an identifier to UpperCase (Select the identifier, type `upper` in the Quick Access Field in the Toolbar and confirm with **Enter**)
 * Mess up the indentation of a part of the source code, select it and **format only the selection**.
 
 ### Navigate
@@ -80,8 +80,8 @@ The goal of the first part is to get comfortable with the Sigasi Studio VHDL edi
 * Move forward to your original location (**Alt+Right**)
 * Go to Line  (**Ctrl+L**)
 * Navigate to errors with the gutter (Click red rectangles in scroll bar)
-* Navigate to next problem marker (**Ctrl+.**)
-* Navigate with the *Outline view* (**Ctrl-O**)
+* Navigate to next problem marker (**Ctrl+.**, *Ctrl-key and dot-key*)
+* Navigate with the *Outline view* (**Ctrl+O**)
 
 ### Customize settings
 
@@ -257,6 +257,7 @@ We will also explore other features that are not specific to VHDL.
  ```
 
 ### VHDL version
+ * Set the workspace VHDL version to '93
  * Open `version.vhd`
  * Review the errors
  * Change the VHDL version of the project
