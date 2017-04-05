@@ -2,19 +2,6 @@
 
 # Sigasi Training
 
-|       | Agenda                |
-| ----- | :-------------------- |
-| 9:00  | General Introduction  |
-| 9:15  | Part 1: VHDL Files    |
-| 10:45 | break                 |
-| 11:00 | Part 2 : VHDL projects|
-| 12:30 | Lunch break           |
-| 13:30 | Part 3 : Linting and other features|
-| 15:00 | break                 |
-| 15:15 | Part 4 : Hierarchy, Graphics and documentation|
-| 16:45 | Recap and Q&A         |
-| 17:00 | End                   |
-
 ## Setup
 
 Requirements:
@@ -25,6 +12,14 @@ Requirements:
 
 The zip file contains folders with VHDL code for each of the following parts, named `part1` through `part4`.
 The VHDL source files contain `TODO` comments, which explain the tasks of the exercises. This document is an extra tool to guide you trough the exercises. It also helps you to keep track of your progress.
+
+
+## Troubleshooting
+
+* Where are my views? → **Window > Perspective > Reset perspective**
+* Unexpected error markers? → **Project > Clean...**
+* Error markers are not updated? → Make sure **Automatic build** is enabled
+* More on <http://insights.sigasi.com/manual/trouble.html>
 
 <p style="page-break-after:always;"></p>
 
@@ -370,14 +365,6 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 
 * State Machine View: Add a second state machine in `dut.vhd` and note how it is displayed in a new tab.
 * Finish the documentation of the Project to get a clean and complete PDF.
-<p style="page-break-after:always;"></p>
-## Troubleshooting
-
-* Where are my views? → **Window > Perspective > Reset perspective**
-* Unexpected error markers? → **Project > Clean...**
-* Error markers are not updated? → Make sure **Automatic build** is enabled
-* More on <http://insights.sigasi.com/manual/trouble.html>
-
 
 ---
-Copyright © Sigasi nv 2016
+Copyright © Sigasi nv 2017
