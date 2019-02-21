@@ -6,12 +6,12 @@
 
 Requirements:
 
-* Sigasi Studio 3.4
-* Valid Sigasi Studio XL Doc licenses for all participants
+* Sigasi Studio 4.2
+* Valid Sigasi Studio XPRT licenses for all participants
 * Training VHDL sources:
-
-The zip file contains folders with VHDL code for each of the following parts, named `part1` through `part4`.
-The VHDL source files contain `TODO` comments, which explain the tasks of the exercises. This document is an extra tool to guide you trough the exercises. It also helps you to keep track of your progress.
+  * The sources can be cloned from https://github.com/sigasi/sigasi_training.git
+  * The source repository contains folders with VHDL code for each of the following parts, named `part1` through `part4`.
+  * The VHDL source files contain `TODO` comments, which explain the tasks of the exercises. This document is an extra tool to guide you trough the exercises. It also helps you to keep track of your progress.
 
 
 ## Troubleshooting
@@ -19,21 +19,20 @@ The VHDL source files contain `TODO` comments, which explain the tasks of the ex
 * Where are my views? → **Window > Perspective > Reset perspective**
 * Unexpected error markers? → **Project > Clean...**
 * Error markers are not updated? → Make sure **Automatic build** is enabled
-* More on <http://insights.sigasi.com/manual/trouble.html>
+* More on <https://insights.sigasi.com/manual/trouble.html>
 
 <p style="page-break-after:always;"></p>
 
 ![](blank.png)
 <p style="page-break-after:always;"></p>
-## Part 1: VHDL files
+## Part 1: HDL files
 
-The goal of the first part is to get comfortable with the Sigasi Studio VHDL editor. By the end you will be able to _easily detect and fix VHDL syntax issues_, _customize editor preferences_ and _know the basic keyboard shortcuts_.
+The goal of the first part is to get comfortable with the Sigasi Studio HDL editor. By the end you will be able to _easily detect and fix HDL syntax issues_, _customize editor preferences_ and _know the basic keyboard shortcuts_.
 
 ### Setup
 * Open the Sigasi application
-* Switch from the **Sigasi Starter** to the **Sigasi** perspective (Sigasi logos in top right)
 * In the status bar the status of the Sigasi license is shown
-  * If you have a commercial license it should indicate **Sigasi Studio Creator** or **Sigasi Studio XL (Doc)**
+  * If you have a commercial license it should indicate **Sigasi Studio Creator**, **Sigasi Studio XL** or **Sigasi Studio XPRT**
 * Import project `Part1`
   1. **File > Import...**
   2. **General > Existing project into Workspace**, **Next**
@@ -47,30 +46,34 @@ The goal of the first part is to get comfortable with the Sigasi Studio VHDL edi
 * Make the editor _full screen_ (Double click on the tab)
 * Double click again to exit _full screen_ mode
 * Format the VHDL code (**Ctrl+Shift+F**, _Make sure that no text is selected_)
+* Undo (**Ctrl+Z**) your previous change to correct a mistake
+* Redo (**Ctrl+Shift+Z**) to restore a change that was undone
 * Fix all VHDL syntax issues, use the QuickFix where possible (When in doubt, **Hover** over the error Marker)
 * Delete a line with **Ctrl+D**
 * Comment a line with **Ctrl+/**
 * Move a line up and down with **Alt+Up** and **Alt+Down**
+* Jump to the next error using **Ctrl+.**
 * Autocomplete (**Ctrl+Space**)
-    * Name
+    * Signal Name
     * Constant declaration
     * `if` statement in a `process` (Use **tab** to jump to the next field, use **enter** to exit the _template mode_)
-    * `if generate` in an `architecture`  
+    * `if generate` in an `architecture`
 * Block select (**Shift+Alt+A**, or button in toolbar)
     * Delete a Block
-    * Add content on multiple lines 
+    * Add content on multiple lines
 * Enable _Show whitespace_ (¶-button) and type some _tabs_ and _spaces_ to see the difference
 * Find & Replace  
     * Experiment with **Ctrl+F**, e.g. find all `TODO`'s
     * Use **Ctrl+K** to find the next occurrence of the current selection
     * Use **Ctrl+J** (and start typing) for an inline, incremental search. _Look at the status bar to see what you have already typed_.
 * Use **Quick Access** (top-right text field or **Ctrl+3**) to convert an identifier to UpperCase (Select the identifier, type `upper` in the Quick Access Field in the Toolbar and confirm with **Enter**)
-* Mess up the indentation of a part of the source code, select it and **format only the selection**.
+* Mess up the indentation of a part of the source code, select it and **format only the selection**
+* Save all changes to your file (**Ctrl+S**)
 
 ### Navigate
 
 * Open file `part1_2_navigate.vhd`
-* Go to Declaration  (**F3**)
+* Go to Declaration can be done in various ways (Hover, Right-clik Menu, **F3**)
 * Move back to last location (**Alt+Left**)
 * Move forward to your original location (**Alt+Right**)
 * Go to Line  (**Ctrl+L**)
@@ -84,14 +87,17 @@ Preferences can be set via **Window > Preferences**.
 
 * Open file `part1_3_custom.vhd`
 * Switch to VHDL 2008 (**Preferences > Sigasi > VHDL**) and note that the syntax error get resolved
+* After switching VHDL versions, the _Common Libraries_ need to be reset (Use the _Quick Fix_ offered on the first line of the file)
 * Tabs or spaces ( Use the search box in the preference dialog and type `tab`) Use _Show whitespace_ to check.
 * Uppercase keywords (**Preferences > Sigasi > VHDL > Formatting**) (Use _format_ to check)
+* Add a keyboard shortcut for _Show whitespace_.
+* Reset the keywords formatting to your preference (uppercase, lowercase or ignore)
 
 ### Optional Extra tasks
 
 * Open file `part1_4_extra.vhd`
+* Try *structured select* using **Shift+Alt+cursor** <https://insights.sigasi.com/manual/editor.html#structured-selection>
 * *Stuttering* (in the editor, double tap the `.`, `;` or `,` key)
-* Try *structured select* <http://insights.sigasi.com/manual/editor.html#structured-selection>
 * Drag and drop a file from your file explorer in the Editor part of Sigasi Studio
 * Create a new file  (**File > New > VHDL File** or right click on project or folder)
 * In **Outline** and **Project Explorer**: Figure out what *Link with editor* button (⇆) does
@@ -138,7 +144,7 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
   * Dependencies View
 * Move the views around by draging them to another location.
 * Close views by clicking the X button
-* Reset all views by right-clicking on the perspective icon & choose **Reset**
+* Reset all views by right-clicking on the perspective icon (the small Sigasi icon in the top-right corner) & choose **Reset**
 
 ### Edit 
 
@@ -162,7 +168,6 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 * Open `libraries.vhd`
 * Set folder `my_lib` to library `my_lib` (Project explorer: **Set Library**)
 
-
 ### State machines
 
 * Open file `fsm.vhd`
@@ -178,7 +183,8 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 
 * Open file `rename.vhd`
 * Manual rename: Change (edit) `port_1` to `port_1a` and manually update the matching instantiations
-* Rename (**Refactor > Rename element**) port `port_a` to `port_aa`
+* Rename (**Refactor > Rename element** or **Shift+Alt+R**) port `port_a` to `port_aa`
+* Save the file (**Ctrl+S**)
 * Compare file with *Local history* (Right-click on file, **Compare With > Local History...**) and inspect the changes you made
 
 ### Import (non-Sigasi) project + setup libraries
@@ -227,9 +233,10 @@ We will also explore other features that are not specific to VHDL.
 * Give it the name `Problems of this file`
 * Move the view next to the original **Problems view**
 * Click the triangle in your new **Problems view**
-* Choose **Configure Contents**
+* Choose **Filters...**
 * Untick **Show all items**
-* Limit the scope to **On selected element only**
+* Select only the Configuration **Errors/Warnings on Selection**
+* Limit the scope to **On selected elements only**
 * The new problems view will only show problems in the currently selected file.
 
 ### Waive specific warnings
@@ -239,20 +246,20 @@ We will also explore other features that are not specific to VHDL.
  ```
  -- @suppress
  ```  
- **Note:** You need to save the file before the warnings disappears.
-* Note that the warning marker is removed from the **Problems View**
-* Explicitly specify which warning you suppress by adding the warning message prefix:
+* The warning disappears shortly after typing the @suppress comment
+* Note that the warning marker is removed from the **Problems View** once you save the file
+* Explicitly specify which warning you suppress by adding the warning message prefix
  ```
- -- @suppress "Null Range"
+ -- @suppress "Null range"
  ```
-* Note that the warning marker re-appears when you type another prefix
-* Now also explain why you suppress the warning by adding an explanation:
+* Note that the warning marker re-appears when you type another prefix or make a typo
+* Now also explain why you suppress the warning by adding an explanation
  ```
- -- @suppress "Null Range" Ok here, see http://...
+ -- @suppress "Null range" Ok here, see http://...
  ```
 
 ### VHDL version
- * Set the workspace VHDL version to '93
+ * Set the workspace VHDL version to '93 via the Preferences (**Sigasi > VHDL**) 
  * Open `version.vhd`
  * Review the errors
  * Change the VHDL version of the project
@@ -266,11 +273,11 @@ We will also explore other features that are not specific to VHDL.
 ### Other features
 
 * Project Explorer
-  * Show hidden files (Click **▿**, **Customize view**, disable the `.* resources`)
-  * Delete a file from your project. Next, restore this file from local history (Right click, **Restore from Local History...**)
+  * Show hidden files (Click **▿**, **Filters and Customization**, disable the `.* resources`)
+  * Delete a file from your project. Next, restore this file from local history: In the Project Explorer, right click the project **Part3** and select **Restore from Local History...**
 * Bookmarks:
   * Right click a line number and select **Add Bookmark**
-  * Open the bookmark view (**Window > Show View**)
+  * Open the Bookmarks view (**Window > Show View > Other... > General > Bookmarks**)
 * Multiple screen support
   1. Open a new Window (**Window > New Window**)
   2. Drag the new windows to a different screen
@@ -293,7 +300,7 @@ We will also explore other features that are not specific to VHDL.
   1. Run a first search (e.g. Find Reference on `std_logic`)
   2. Click the **Pin the Search View** button
   3. Start a new search. This search will open in a new _Search View_
-* Configure project specific settings <http://insights.sigasi.com/manual/linting.html#project-specific-linting-settings>
+* Configure project specific settings <https://insights.sigasi.com/manual/linting.html#project-specific-linting-settings>
 * Expriment with customized Templates
   * Use different contexts: DesignFile, ConcurrentStatement, AnyWhere
   * Explore the pattern syntax by looking at the existing templates.
@@ -316,7 +323,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
   * Inspect the value of generics (Notice how the value in `dut_instance` differs from its default value)
   * Change the value of a generic and note how the Hierarchy View refreshes when you save the file.
   * Add a syntax error in a file and note that Sigasi Studio is able to recover and still show valid content in the Hierarchy View.
-  * Disable the **Toggle Hierarchy Refresh** toggle button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)
+  * Disable the **Toggle Hierarchy Auto Refresh** button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)
 
 ### Block Diagram View
 
@@ -338,6 +345,19 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 * Toggle the (Aa)-button to show/hide the transition labels.
 * Click the save icon 💾 to export the diagram to file.
 
+### Graphics Configuration
+
+* Open `testbench.vhd`
+* In the Block Diagram View, press the **Group all wires between blocks** button. This button creates a new Graphics Configuration file that groups all wires between blocks, except for clock and reset lines.
+* You can change the name of the new bus and control the wires that are grouped by it.
+* In the new blockdiagram file, define a grouped block by adding `def block group tbcontrol (identifiers)`. Note that you can use the autocomplete to avoid having to type the identifiers. Create a group *tbcontrol* that contains the instances of the *clock_generator* and the *stimgen*.
+* Give a color to the *dut* instance by adding `block dut_instance { color COLOR}`.
+* Also give the *stimgen* or *clock_generator* blocks a color. Note that these need to be accessed differently because of the group they are in. Remember the auto-complete for help.
+* Hide the details in *tbcontrol* by collapsing this group. Use `block tbcontrol { collapse}`.
+* Navigation: note that you can also navigate from the identifiers in the blockdiagram file to the HDL code.
+* Edit the HDL code, e.g. by modifying the label of an instantiation, and note that this will cause errors in the blockdiagram file.
+* Documentation and more examples for Graphics Configuration can be found on <https://insights.sigasi.com/manual/graphics.html>
+
 ### Documentation
 
 * Import project `Sigasi_doc`
@@ -348,10 +368,17 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
   * Document a generic
   * Document an architecture
   * Document an entity
+* Experiment with Markdown
+  * Paragraphs and line breaks
+  * *emphasis* and **strong**
+  * lists and tables
+  * external links and email addresses
 * Export PDF
-* Inspect the DocBook file
+  * Explore the generated files in the *sigasi-doc* folder
+  * Inspect the DocBook file
 
 ### Net search
+
 * In `stimgen.vhd` (Project `part4`)
   * Select a the port `stim_data`
   * **Right-Click > Find Net**
@@ -363,8 +390,10 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 
 ### Optional Extra tasks
 
-* State Machine View: Add a second state machine in `dut.vhd` and note how it is displayed in a new tab.
+* State Machine View: Add a second state machine in `dut.vhd` and note how it appears in the State Machine View.
+* Graphics Configuration: use a regex to group some of the signals in the blockdiagram file instead of listing all wire names.
+* Add a Graphics Configuration file for the state machine in `dut.vhd`.
 * Finish the documentation of the Project to get a clean and complete PDF.
 
 ---
-Copyright © Sigasi nv 2017
+Copyright © Sigasi nv

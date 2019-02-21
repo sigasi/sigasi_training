@@ -28,23 +28,24 @@ assert true report "success"; -- TODO comment this line with Ctrl+/
 -- TODO: Move this comment block up and down
 --       by selecting it, and pressing Alt+UP and Alt+down
 
-
+-- Jump to the next error using Ctrl+.
 
 	process (
 		clk,
-		r -- TODO use autocomplete to extend 'r' to 'rst' 
+		r -- TODO use autocomplete to extend 'r' to 'rst'
 	) is
 		  -- TODO define a constant here 
 	begin
--- TODO autocomple an if statement here e.g. if rst = 1
+-- TODO autocomplete an if statement here e.g. if rst = 1
 	end process;
 	
--- TODO autocomple an if generate here
+-- TODO autocomplete an if generate here
 
 assert true; --TODO use Quick Access to convert to upper case (select true first)
 
 end architecture RTL;
 
+-- TODO: use the show-whitespace button (¶) and type some tabs and spaces to see the difference.
 
 -- TODO: find and Replace:
 --     * press **Ctrl+F** to find all `TODO`'s
@@ -52,3 +53,4 @@ end architecture RTL;
 --	   * Use **Ctrl+J** (and start typing) for an inline, incremental search. 
 --       _Look at the status bar to see what you have already typed_.
 
+-- TODO: Use Quick Access to convert an identifier to UpperCase

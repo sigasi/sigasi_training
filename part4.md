@@ -11,7 +11,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
   * Inspect the value of generics (Notice how the value in `dut_instance` differs from its default value)
   * Change the value of a generic and note how the Hierarchy View refreshes when you save the file.
   * Add a syntax error in a file and note that Sigasi Studio is able to recover and still show valid content in the Hierarchy View.
-  * Disable the **Toggle Hierarchy Refresh** toggle button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)
+  * Disable the **Toggle Hierarchy Auto Refresh** button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)
 
 ### Block Diagram View
 
@@ -33,6 +33,19 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 * Toggle the (Aa)-button to show/hide the transition labels.
 * Click the save icon 💾 to export the diagram to file.
 
+### Graphics Configuration
+
+* Open `testbench.vhd`
+* In the Block Diagram View, press the **Group all wires between blocks** button. This button creates a new Graphics Configuration file that groups all wires between blocks, except for clock and reset lines.
+* You can change the name of the new bus and control the wires that are grouped by it.
+* In the new blockdiagram file, define a grouped block by adding `def block group tbcontrol (identifiers)`. Note that you can use the autocomplete to avoid having to type the identifiers. Create a group *tbcontrol* that contains the instances of the *clock_generator* and the *stimgen*.
+* Give a color to the *dut* instance by adding `block dut_instance { color COLOR}`.
+* Also give the *stimgen* or *clock_generator* blocks a color. Note that these need to be accessed differently because of the group they are in. Remember the auto-complete for help.
+* Hide the details in *tbcontrol* by collapsing this group. Use `block tbcontrol { collapse}`.
+* Navigation: note that you can also navigate from the identifiers in the blockdiagram file to the HDL code.
+* Edit the HDL code, e.g. by modifying the label of an instantiation, and note that this will cause errors in the blockdiagram file.
+* Documentation and more examples for Graphics Configuration can be found on <https://insights.sigasi.com/manual/graphics.html>
+
 ### Documentation
 
 * Import project `Sigasi_doc`
@@ -43,10 +56,17 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
   * Document a generic
   * Document an architecture
   * Document an entity
+* Experiment with Markdown
+  * Paragraphs and line breaks
+  * *emphasis* and **strong**
+  * lists and tables
+  * external links and email addresses
 * Export PDF
-* Inspect the DocBook file
+  * Explore the generated files in the *sigasi-doc* folder
+  * Inspect the DocBook file
 
 ### Net search
+
 * In `stimgen.vhd` (Project `part4`)
   * Select a the port `stim_data`
   * **Right-Click > Find Net**
@@ -58,5 +78,7 @@ In Part 4 you will learn how to use the Hierarchy View. You will also learn how 
 
 ### Optional Extra tasks
 
-* State Machine View: Add a second state machine in `dut.vhd` and note how it is displayed in a new tab.
+* State Machine View: Add a second state machine in `dut.vhd` and note how it appears in the State Machine View.
+* Graphics Configuration: use a regex to group some of the signals in the blockdiagram file instead of listing all wire names.
+* Add a Graphics Configuration file for the state machine in `dut.vhd`.
 * Finish the documentation of the Project to get a clean and complete PDF.

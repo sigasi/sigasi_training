@@ -19,9 +19,10 @@ We will also explore other features that are not specific to VHDL.
 * Give it the name `Problems of this file`
 * Move the view next to the original **Problems view**
 * Click the triangle in your new **Problems view**
-* Choose **Configure Contents**
+* Choose **Filters...**
 * Untick **Show all items**
-* Limit the scope to **On selected element only**
+* Select only the Configuration **Errors/Warnings on Selection**
+* Limit the scope to **On selected elements only**
 * The new problems view will only show problems in the currently selected file.
 
 ### Waive specific warnings
@@ -31,20 +32,20 @@ We will also explore other features that are not specific to VHDL.
  ```
  -- @suppress
  ```  
- **Note:** You need to save the file before the warnings disappears.
-* Note that the warning marker is removed from the **Problems View**
-* Explicitly specify which warning you suppress by adding the warning message prefix:
+* The warning disappears shortly after typing the @suppress comment
+* Note that the warning marker is removed from the **Problems View** once you save the file
+* Explicitly specify which warning you suppress by adding the warning message prefix
  ```
- -- @suppress "Null Range"
+ -- @suppress "Null range"
  ```
-* Note that the warning marker re-appears when you type another prefix
-* Now also explain why you suppress the warning by adding an explanation:
+* Note that the warning marker re-appears when you type another prefix or make a typo
+* Now also explain why you suppress the warning by adding an explanation
  ```
- -- @suppress "Null Range" Ok here, see http://...
+ -- @suppress "Null range" Ok here, see http://...
  ```
 
 ### VHDL version
- * Set the workspace VHDL version to '93
+ * Set the workspace VHDL version to '93 via the Preferences (**Sigasi > VHDL**) 
  * Open `version.vhd`
  * Review the errors
  * Change the VHDL version of the project
@@ -58,11 +59,11 @@ We will also explore other features that are not specific to VHDL.
 ### Other features
 
 * Project Explorer
-  * Show hidden files (Click **▿**, **Customize view**, disable the `.* resources`)
-  * Delete a file from your project. Next, restore this file from local history (Right click, **Restore from Local History...**)
+  * Show hidden files (Click **▿**, **Filters and Customization**, disable the `.* resources`)
+  * Delete a file from your project. Next, restore this file from local history: In the Project Explorer, right click the project **Part3** and select **Restore from Local History...**
 * Bookmarks:
   * Right click a line number and select **Add Bookmark**
-  * Open the bookmark view (**Window > Show View**)
+  * Open the Bookmarks view (**Window > Show View > Other... > General > Bookmarks**)
 * Multiple screen support
   1. Open a new Window (**Window > New Window**)
   2. Drag the new windows to a different screen
@@ -85,7 +86,7 @@ We will also explore other features that are not specific to VHDL.
   1. Run a first search (e.g. Find Reference on `std_logic`)
   2. Click the **Pin the Search View** button
   3. Start a new search. This search will open in a new _Search View_
-* Configure project specific settings <http://insights.sigasi.com/manual/linting.html#project-specific-linting-settings>
+* Configure project specific settings <https://insights.sigasi.com/manual/linting.html#project-specific-linting-settings>
 * Expriment with customized Templates
   * Use different contexts: DesignFile, ConcurrentStatement, AnyWhere
   * Explore the pattern syntax by looking at the existing templates.

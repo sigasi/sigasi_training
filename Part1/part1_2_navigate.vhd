@@ -17,8 +17,8 @@ begin
 	begin
 
 		if (rst = '1') then
-		elsif rising_edge(clk) then
-			data_out <= data_in; -- TODO right click and select "Open declaration" on data_in
+		elsif rising_edge(clk) then -- TODO hover over clk and from the pop-up select "Open Declaration"
+			data_out <= data_in;    -- TODO right click and select "Open Declaration" on data_in
 		end if;
 	end process name; --TODO use F3 do navigate to the declaration of name, navigate back with Alt+left
 	
@@ -100,6 +100,5 @@ end architecture RTL;
 
 
 intentional syntax error here;
---TODO navigate to port `clk` by clicking it in the outline view.
-
-
+-- TODO navigate to port `clk` by clicking it in the outline view - Then come back here
+-- TODO Now press Ctrl+o to open the quick outline and start typing `clk` to find the same port

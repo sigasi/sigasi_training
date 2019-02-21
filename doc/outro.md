@@ -1,3 +1,3 @@
 
 ---
-Copyright © Sigasi nv 2017
+Copyright © Sigasi nv

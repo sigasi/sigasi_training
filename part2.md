@@ -33,7 +33,7 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
   * Dependencies View
 * Move the views around by draging them to another location.
 * Close views by clicking the X button
-* Reset all views by right-clicking on the perspective icon & choose **Reset**
+* Reset all views by right-clicking on the perspective icon (the small Sigasi icon in the top-right corner) & choose **Reset**
 
 ### Edit 
 
@@ -57,7 +57,6 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 * Open `libraries.vhd`
 * Set folder `my_lib` to library `my_lib` (Project explorer: **Set Library**)
 
-
 ### State machines
 
 * Open file `fsm.vhd`
@@ -73,7 +72,8 @@ As an extra, you will learn how to efficiently work with Finite State Machines.
 
 * Open file `rename.vhd`
 * Manual rename: Change (edit) `port_1` to `port_1a` and manually update the matching instantiations
-* Rename (**Refactor > Rename element**) port `port_a` to `port_aa`
+* Rename (**Refactor > Rename element** or **Shift+Alt+R**) port `port_a` to `port_aa`
+* Save the file (**Ctrl+S**)
 * Compare file with *Local history* (Right-click on file, **Compare With > Local History...**) and inspect the changes you made
 
 ### Import (non-Sigasi) project + setup libraries

@@ -4,15 +4,20 @@ use IEEE.numeric_std.all;
 
 entity dut is
 	generic(
-		iterations : integer := 10
+		slave_id   : std_logic_vector(1 downto 0) := "01";
+		iterations : integer                      := 10
 	);
 	port(
-		data_out : out unsigned(7 downto 0);
-		data_in  : in  unsigned(7 downto 0);
-		valid    : out std_logic;
-		start    : in  std_logic;
-		clk      : in  std_logic;
-		rst      : in  std_logic
+		clk_i : in  std_logic;
+		rst_i : in  std_logic;
+		adr_i : in  std_logic_vector(3 downto 0);
+		dat_i : in  unsigned(7 downto 0);
+		dat_o : out unsigned(7 downto 0);
+		we_i  : in  std_logic;
+		sel_i : in  std_logic_vector(1 downto 0);
+		stb_i : in  std_logic;
+		ack_o : out std_logic;
+		cyc_i : in  std_logic
 	);
 end entity dut;
 
@@ -23,31 +28,31 @@ architecture RTL of dut is
 begin
 	assert iterations <= MAX_COUNT;
 
-	COUNTER : process(clk, rst) is
+	COUNTER : process(clk_i, rst_i) is
 		variable state : state_t;
 	begin
-		if rst = '1' then
-			state := idle;
-			count <= 0;
-			valid <= '0';
+		if rst_i = '1' then
+			state  := idle;
+			count  <= 0;
+			ack_o  <= '0';
 			result <= (others => '0');
-		elsif rising_edge(clk) then
-		    -- TODO "State Machines View": right-click and select *Show in > State Machines*
-		    -- The States Machines View and shows the state machine in this file.
-		    -- You can change the position and size of the Block Diagram view if you like.
+		elsif rising_edge(clk_i) then
+			-- TODO "State Machines View": right-click and select *Show in > State Machines*
+			-- The States Machines View and shows the state machine in this file.
+			-- You can change the position and size of the Block Diagram view if you like.
 			case state is
 				when idle =>
-					valid <= '0';
+					ack_o  <= '0';
 					result <= (others => '0');
-					
-				    -- TODO "Type-time update":
-				    -- Uncomment the next line and see how State Machines view updates.
-				    
---				     state := preparing; -- 
+
+				-- TODO "Type-time update":
+				-- Uncomment the next line and see how State Machines view updates.
+
+				--				     state := preparing; -- 
 				when preparing =>
-					if start = '1' then
+					if sel_i = slave_id and we_i = '1' then
 						count <= 0;
-						if (valid = '1') then
+						if (ack_o = '1') then
 							state := running; --
 						else
 							state := ready; -- error
@@ -56,20 +61,20 @@ begin
 				when running =>
 					if count = iterations then
 						state  := ready;
-						result <= result * data_in;
+						result <= result * dat_i;
 					end if;
 					count <= count + 1;
 				-- TODO "Navigate from FSM to state in code": in the State Machines View, 
 				-- double-click on the node "ready". The when-clause for state "ready"
 				-- will be selected. That way, you can navigate to 
-				
+
 				when ready =>
-					data_out <= result;
-					valid <= '1';
-    				-- TODO "Navigate from FSM to transition in code": in the State Machines View, 
-    				-- double-click on the arrow between "ready" and "idle". The assignment on the 
-    				-- line below will be highlighted. You can use this to navigate to state transitions.
-					state := idle; -- go to idle
+					dat_o <= result;
+					ack_o <= '1';
+					-- TODO "Navigate from FSM to transition in code": in the State Machines View, 
+					-- double-click on the arrow between "ready" and "idle". The assignment on the 
+					-- line below will be highlighted. You can use this to navigate to state transitions.
+					state := idle;      -- go to idle
 			end case;
 		end if;
 	end process COUNTER;
